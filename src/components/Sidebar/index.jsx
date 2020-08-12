@@ -35,7 +35,7 @@ const sidebar = ({ isHomePage }) => {
                 label {
                   value
                 }
-                path {
+                slug {
                   value
                 }
               }

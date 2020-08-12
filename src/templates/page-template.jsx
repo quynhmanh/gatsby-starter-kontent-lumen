@@ -41,25 +41,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    kontentItemMenu(system: {codename: {eq: "navigation_menu"}}) {
-      elements {
-        menu_items {
-          value {
-            ... on kontent_item_menu_item {
-              id
-              elements {
-                label {
-                  value
-                }
-                path {
-                  value
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     kontentItemAuthor(system: {codename: {eq: "author"}}) {
       elements {
         bio {
