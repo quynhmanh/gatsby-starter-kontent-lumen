@@ -26,6 +26,7 @@
     "CMS"
   ],
   "dependencies": {
+    "@kentico/kontent-smart-link": "0.0.3",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0"

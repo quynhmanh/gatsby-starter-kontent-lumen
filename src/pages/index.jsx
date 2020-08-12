@@ -49,6 +49,9 @@ export const pageQuery = graphql`
     }
     allKontentItemArticle(filter: {preferred_language: {eq: "en-US"}}) {
       nodes {
+        system {
+          id
+        }
         elements {
           category {
             value {

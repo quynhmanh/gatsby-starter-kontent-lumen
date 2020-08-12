@@ -12,9 +12,10 @@ class Article extends React.Component {
     const categorySlug = _.get(this.props, 'data.elements.category.value[0].elements.slug.value', 'N/A')
     const description = _.get(this.props, 'data.elements.description.value', 'N/A')
     const slug = `/articles/${_.get(this.props, 'data.elements.slug.value', 'N/A')}`
+    const itemId = _.get(this.props, 'data.system.id')
 
     return (
-      <div className="article">
+      <div className="article" data-kontent-item-id={itemId}>
         <div className="article__meta">
           <time
             className="article__meta-time"
