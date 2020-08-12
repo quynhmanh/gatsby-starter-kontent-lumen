@@ -27,6 +27,8 @@ class CategoriesRoute extends React.Component {
                         <li
                           key={category.system.codename}
                           className="categories__list-item"
+                          data-kontent-item-id={category.system.id}
+                          data-kontent-element-codename="title"                          
                         >
                           <Link
                             to={`/categories/${category.elements.slug.value}/`}
@@ -75,6 +77,7 @@ export const pageQuery = graphql`
           }
         }
         system {
+          id
           codename
         }
       }

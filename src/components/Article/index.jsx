@@ -20,22 +20,23 @@ class Article extends React.Component {
           <time
             className="article__meta-time"
             dateTime={moment(date).format('MMMM D, YYYY')}
+            data-kontent-element-codename="date"
           >
             {moment(date).format('MMMM YYYY')}
           </time>
           <span className="article__meta-divider" />
-          <span className="article__meta-category" key={categorySlug}>
+          <span className="article__meta-category" key={categorySlug}  data-kontent-element-codename="category">
             <Link to={`/categories/${categorySlug}/`} className="article__meta-category-link">
               {category}
             </Link>
           </span>
         </div>
-        <h2 className="article__title">
+        <h2 className="article__title" data-kontent-element-codename="title">
           <Link className="article__title-link" to={slug}>
             {title}
           </Link>
         </h2>
-        <p className="article__description">{description}</p>
+        <p className="article__description"  data-kontent-element-codename="description">{description}</p>
         <Link className="article__readmore" to={slug}>
           Read
         </Link>

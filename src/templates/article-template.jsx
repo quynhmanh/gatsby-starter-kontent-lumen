@@ -75,6 +75,9 @@ export const pageQuery = graphql`
     }
     allKontentItemArticle(filter: {elements: {slug: {value: {eq: $slug}}}}, sort: {fields: elements___date___value, order: DESC}) {
       nodes {
+        system {
+          id
+        }
         elements {
           category {
             value {

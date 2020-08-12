@@ -17,7 +17,7 @@ class Links extends React.Component {
     return (
       <div className="links">
         <ul className="links__list">
-          <li className="links__list-item">
+          <li className="links__list-item" data-kontent-element-codename="twitter">
             <a
               href={`https://www.twitter.com/${links.twitter}`}
               target="_blank"
@@ -26,7 +26,7 @@ class Links extends React.Component {
               <i className="icon-twitter" />
             </a>
           </li>
-          <li className="links__list-item">
+          <li className="links__list-item" data-kontent-element-codename="github">
             <a
               href={`https://www.github.com/${links.github}`}
               target="_blank"
@@ -35,7 +35,7 @@ class Links extends React.Component {
               <i className="icon-github" />
             </a>
           </li>
-          <li className="links__list-item">
+          <li className="links__list-item" data-kontent-element-codename="vk">
             <a
               href={`https://www.vk.com/${links.vk}`}
               target="_blank"
@@ -46,12 +46,12 @@ class Links extends React.Component {
           </li>
         </ul>
         <ul className="links__list">
-          <li className="links__list-item">
+          <li className="links__list-item" data-kontent-element-codename="email">
             <a href={`mailto:${links.email}`}>
               <i className="icon-mail" />
             </a>
           </li>
-          <li className="links__list-item">
+          <li className="links__list-item" data-kontent-element-codename="telegram">
             <a href={`telegram:${links.telegram}`}>
               <i className="icon-paper-plane" />
             </a>
