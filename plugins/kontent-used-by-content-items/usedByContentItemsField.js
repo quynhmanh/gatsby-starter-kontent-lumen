@@ -54,7 +54,6 @@ const linkUsedByContentItems = (
             type: parentGraphqlType,
             firstOnly: false,
           })
-          console.log(linkedNodes);
           return linkedNodes;
         },
       },
