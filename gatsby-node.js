@@ -44,11 +44,24 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-      allKontentItemPage(filter: {preferred_language: {eq: "en-US"}}) {
+      allKontentItemMenuItem(
+        filter: {preferred_language: {eq: "en-US"},
+        elements: {slug: {value: {ne: "/"}}}}
+      ) {
         nodes {
           elements {
             slug {
               value
+            }
+            content {
+              value {
+                ... on kontent_item_page {
+                  preferred_language
+                  system {
+                    codename
+                  }
+                }
+              }
             }
           }
         }
@@ -69,11 +82,15 @@ exports.createPages = ({ graphql, actions }) => {
         reject(result.errors)
       }
 
-      _.each(result.data.allKontentItemPage.nodes, node => {
-        createPage({
+      _.each(result.data.allKontentItemMenuItem.nodes, node => {
+        const contentPage = node.elements.content.value[0];
+        contentPage && createPage({
           path: `/${node.elements.slug.value}/`,
           component: slash(pageTemplate),
-          context: { slug: `${node.elements.slug.value}` },
+          context: { 
+            language: `${contentPage.preferred_language}`,
+            codename: `${contentPage.system.codename}` 
+          },
         })
       })
 
