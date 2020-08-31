@@ -151,7 +151,7 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 
 ## Implementing Web spotlight
 
-This example is ready to be used with [Web Spotlight](https://webspotlight.kontent.ai/) functionality. If you want to explore the possibilities, take a look to the [Web Spotlight tutorial](/docs/WEB_SPOTLIGHT.md)!
+This example is ready to be used with [Web Spotlight](https://webspotlight.kontent.ai/) functionality. If you want to explore the possibilities, take a look to the [Web Spotlight tutorial](/docs/WEB-SPOTLIGHT.md)!
 
 ![Web Spotlight preview](./docs/web-spotlight.png)
 
