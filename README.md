@@ -60,7 +60,7 @@ migrated for getting content from headless CMS
 
 Copy [`.env.template`](`./.env.template`) and name it `.env` then set the `KONTENT_PROJECT_ID` environment variable to value from Kontent -> "Project Settings" ->  API keys -> Project ID.
 
-> This step is made automatically when running `npm install` - it is defined as a `prepare` script in `package.json`.
+> This step could be done automatically by running `npm run prepare-environment` command defined in `package.json`.
 
 **You are now ready to use the site as your own!**
 
@@ -69,7 +69,8 @@ Copy [`.env.template`](`./.env.template`) and name it `.env` then set the `KONTE
 Install the dependencies and run development environment
 
 ```sh
-npm install  // Also creates a .env file from .env.template file if no .env file exists
+npm install  
+npm run prepare-environment # Creates a .env file from .env.template file if no .env file exists
 npm run develop
 ```
 
@@ -78,9 +79,34 @@ npm run develop
 Install the dependencies and run production build
 
 ```sh
-npm install // Also creates a .env file from .env.template file if no .env file exists
+npm install
+npm run prepare-environment # Creates a .env file from .env.template file if no .env file exists
 npm run build
 ```
+
+### Preview Deploy
+
+To allow this example load unpublished content via  [Preview Delivery API](https://docs.kontent.ai/reference/delivery-api#section/Production-vs.-Preview), you just need to adjust `.env` file created in ["Join codebase to content data"](#Join-codebase-and-content-data) section by setting these environment variables:
+
++ KONTENT_PREVIEW_KEY=`<PREVIEW_API_KEY>`by passing the [Preview authentication key](https://docs.kontent.ai/reference/delivery-api#section/Authentication)
++ KONTENT_PREVIEW_KEY=`true`
+
+You could also walk through the [Getting started with Gatsby Cloud and Kontent](https://www.gatsbyjs.com/cloud/docs/kontent/getting-started) to set up your Preview environment on [Gatsby Cloud](https://www.gatsbyjs.com/) plus enjoy the bonus in form of [incremental builds](https://www.gatsbyjs.com/cloud/docs/incremental-builds/).
+
+If you are more fan of [Netlify](https://www.netlify.com/), you could follow [Deploy to Netlify section](#Deploy-with-Netlify) and then provide the [Environment variables](https://docs.netlify.com/configure-builds/environment-variables/) mentioned above in Netlify.
+
+#### Preview URLs
+
+Once you've got your app running in a preview environment, you need to specify where (URL-wise) each type of your content can be accessed and viewed. For example, imagine your app runs at https://preview.example.com so you want to open "Project Settings", and select "Preview URLs" set it like this:
+
++ `Article`: `https://preview.example.com/articles/{URLslug}`
++ `Author`: `https://preview.example.com`
++ `Category`: `https://preview.example.com/categories/{URLslug}`
++ `Menu`: `https://preview.example.com`
++ `Menu Item`: `https://preview.example.com/{URLslug}`
++ `Tag`: `https://preview.example.com/tags/{URLslug}`
+
+> If you are using more complex and nested menu navigation, use example of the [Gatsby Navigation example](https://github.com/Kentico/kontent-gatsby-packages/tree/master/examples/navigation#readme). In a nutshell, you want to register routes endpoint i.e. `/preview/<LANGUAGE>/<CODENAME>` to the same page as was registered for `normal` URL.
 
 ### Production Deploy
 
@@ -88,7 +114,7 @@ Before deploying to production add own google analytics `trackingId` to [`gatsby
 
 ## Deploy with Netlify
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. Use the button below to build and deploy your own copy of the repository:
+Netlify can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. Use the button below to build and deploy your own copy of the repository:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kentico/gatsby-starter-kontent-lumen)
 
@@ -122,5 +148,11 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
     ├── pages
     └── templates
 ```
+
+## Implementing Web spotlight
+
+This example is ready to be used with [Web Spotlight](https://webspotlight.kontent.ai/) functionality. If you want to explore the possibilities, take a look to the [Web Spotlight tutorial](/docs/WEB-SPOTLIGHT.md)!
+
+![Web Spotlight preview](./docs/web-spotlight.png)
 
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/gatsby-starter-kontent-lumen?pixel)

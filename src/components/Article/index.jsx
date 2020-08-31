@@ -12,29 +12,31 @@ class Article extends React.Component {
     const categorySlug = _.get(this.props, 'data.elements.category.value[0].elements.slug.value', 'N/A')
     const description = _.get(this.props, 'data.elements.description.value', 'N/A')
     const slug = `/articles/${_.get(this.props, 'data.elements.slug.value', 'N/A')}`
+    const itemId = _.get(this.props, 'data.system.id')
 
     return (
-      <div className="article">
+      <div className="article" data-kontent-item-id={itemId}>
         <div className="article__meta">
           <time
             className="article__meta-time"
             dateTime={moment(date).format('MMMM D, YYYY')}
+            data-kontent-element-codename="date"
           >
             {moment(date).format('MMMM YYYY')}
           </time>
           <span className="article__meta-divider" />
-          <span className="article__meta-category" key={categorySlug}>
+          <span className="article__meta-category" key={categorySlug}  data-kontent-element-codename="category">
             <Link to={`/categories/${categorySlug}/`} className="article__meta-category-link">
               {category}
             </Link>
           </span>
         </div>
-        <h2 className="article__title">
+        <h2 className="article__title" data-kontent-element-codename="title">
           <Link className="article__title-link" to={slug}>
             {title}
           </Link>
         </h2>
-        <p className="article__description">{description}</p>
+        <p className="article__description"  data-kontent-element-codename="description">{description}</p>
         <Link className="article__readmore" to={slug}>
           Read
         </Link>

@@ -27,12 +27,15 @@ const sidebar = ({ isHomePage }) => {
         menu_items {
           value {
             ... on kontent_item_menu_item {
+              system {
+                id
+              }
               id
               elements {
                 label {
                   value
                 }
-                path {
+                slug {
                   value
                 }
               }
@@ -42,6 +45,9 @@ const sidebar = ({ isHomePage }) => {
       }
     }
     kontentItemAuthor(system: {codename: {eq: "author"}}) {
+      system {
+        id
+      }
       elements {
         bio {
           value
@@ -86,7 +92,7 @@ const sidebar = ({ isHomePage }) => {
   return (
     <div className="sidebar">
       <div className="sidebar__inner">
-        <div className="sidebar__author">
+        <div className="sidebar__author" data-kontent-item-id={author.system.id}>
           <div>
             <Link to="/">
               <img
@@ -95,22 +101,23 @@ const sidebar = ({ isHomePage }) => {
                 width="75"
                 height="75"
                 alt={author.name}
+                data-kontent-element-codename="avatar_image"
               />
             </Link>
             {isHomePage ? (
-              <h1 className="sidebar__author-title">
+              <h1 className="sidebar__author-title" data-kontent-element-codename="name">
                 <Link className="sidebar__author-title-link" to="/">
                   {author.elements.name.value}
                 </Link>
               </h1>
             ) : (
-              <h2 className="sidebar__author-title">
+              <h2 className="sidebar__author-title" data-kontent-element-codename="name">
                 <Link className="sidebar__author-title-link" to="/">
                   {author.elements.name.value}
                 </Link>
               </h2>
             )}
-            <p className="sidebar__author-subtitle">
+            <p className="sidebar__author-subtitle" data-kontent-element-codename="bio">
               {author.elements.bio.value}
             </p>
           </div>

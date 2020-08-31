@@ -24,7 +24,9 @@ class TagsRoute extends React.Component {
                   <div className="tags">
                     <ul className="tags__list">
                       {tags.map(tag => (
-                        <li key={tag.elements.title.value} className="tags__list-item">
+                        <li key={tag.elements.title.value} className="tags__list-item"
+                          data-kontent-item-id={tag.system.id}
+                          data-kontent-element-codename="title">
                           <Link
                             to={`/tags/${tag.elements.slug.value}/`}
                             className="tags__list-item-link"
@@ -58,6 +60,9 @@ export const pageQuery = graphql`
     }
     allKontentItemTag(filter: {preferred_language: {eq: "en-US"}}) {
       nodes {
+        system {
+          id
+        }
         elements {
           title {
             value

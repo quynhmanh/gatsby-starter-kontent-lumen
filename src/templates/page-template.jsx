@@ -27,7 +27,7 @@ class PageTemplate extends React.Component {
 export default PageTemplate
 
 export const pageQuery = graphql`
-  query PageBySlug($slug: String!) {
+  query PageQuery($codename: String!, $language: String!) {
     kontentItemSiteMetadata(system: {codename: {eq: "site_metadata"}}) {
       elements {
         copyright {
@@ -38,25 +38,6 @@ export const pageQuery = graphql`
         }
         title {
           value
-        }
-      }
-    }
-    kontentItemMenu(system: {codename: {eq: "navigation_menu"}}) {
-      elements {
-        menu_items {
-          value {
-            ... on kontent_item_menu_item {
-              id
-              elements {
-                label {
-                  value
-                }
-                path {
-                  value
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -93,7 +74,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    kontentItemPage(elements: {slug: {value: {eq: $slug}}}) {
+    kontentItemPage(
+      preferred_language: {eq: $language},
+      system: {codename: {eq: $codename}}
+    ) {
       id
       system {
         id

@@ -8,3 +8,6 @@ npm-debug.log
 gatsby-starter-lumen.iml
 yarn.lock
 .env
+.env.*
+!.env.template
+*.log
