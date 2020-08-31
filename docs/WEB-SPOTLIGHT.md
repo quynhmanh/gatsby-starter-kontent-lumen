@@ -1,4 +1,4 @@
-# Implementing Web spotlight
+# Implementing Web Spotlight
 
 [Web Spotlight](./http://webspotlight.kontent.ai/) is an additional tool for [Kentico Kontent](https://kontent.ai) focused on website management. Feel the power of a headless CMS while enabling your content creators to produce and update content in the context of your website.
 
