@@ -63,7 +63,8 @@ These objects are about to be created or enabled when the Web Spotlight is activ
 1. Link the `Navigation Menu` content item from the `HomePage` content item via `Subpages` element and publish the change.
     * ![Add Navigation to Homepage](./homepage-navigation-link.png)
 1. Last remaining step is to set up the [Preview URLs](https://docs.kontent.ai/tutorials/develop-apps/build-strong-foundation/set-up-preview#a-set-up-content-preview-in-your-project)
-    * You should follow [Preview URLs section](../README.md#Preview-URLs) to set them up.
+    * You should follow the [Preview URLs section](../README.md#Preview-URLs) to set them up.
+
 
 ----
 
