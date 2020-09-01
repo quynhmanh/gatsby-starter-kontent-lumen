@@ -18,7 +18,8 @@ _This guide will show you what needs to be done to be able to integrate your pre
 
 ### Get started
 
-It is required to do three steps. First, prepare the code for the Web Spotlight for preview environment, then turn on Web Spotlight on Kontent project, and lastly use newly enabled features to connect Kontent project to preview environment.
+It is required to do three steps. First, prepare the code for the Web Spotlight for preview environment, then turn on Web Spotlight on the Kontent project, and lastly use newly enabled features to connect the Kontent project to the preview environment.
+
 
 ### Kontent Smart Link SDK
 
