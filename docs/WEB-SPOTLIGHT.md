@@ -48,7 +48,8 @@ These objects are about to be created or enabled when the Web Spotlight is activ
         * ![Add new Subpages element](./new-menu-items.png)
     * Open Content listing
         * Select `Navigation Menu` content item of type `Menu`.
-        * Create new version of this item.
+        * Create a new version of this item.
+
         * Link same content items that are linked from `Menu items` element to `New Menu items`.
         * Publish the changes.
         * ![Fill new Subpages element](./new-menu-items-content.png)
