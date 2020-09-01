@@ -38,7 +38,8 @@ These objects are about to be created or enabled when the Web Spotlight is activ
 
 ### Integrate preview with Web Spotlight
 
-1. Instead of newly generated `Page` content type sample is using `Menu Item` page type for the menu definition purposes.
+1. Instead of newly generated `Page` content type sample is using `Menu Item` page type for the menu definition purpose.
+
     * Remove `Page`content type (the one with no content items).
 1. Convert `Menu items` element of `Menu` content type from `Linked items` element to `Subpages`. Following process ensure your content model remains compatible with code.
     * Open content types section.
