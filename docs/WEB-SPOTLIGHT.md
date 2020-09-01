@@ -23,7 +23,8 @@ It is required to do three steps. First, prepare the code for the Web Spotlight 
 
 ### Kontent Smart Link SDK
 
-The site has to use [Kontent Smart Link SDK](https://github.com/Kentico/kontent-smart-link#readme). In this example, the Smar Link SDK is already configured in [layout component](../src/components/Layout/index.jsx) with the query string parameter name set to `preview-mode` and marking the element by the appropriate [data attributes](https://github.com/Kentico/kontent-smart-link/blob/master/README.md#data-attributes). You could use turn on the "Preview mode" by just adding query string parameter to you url (i.e. locally on <http://localhost:8000/?preview-mode=true>).
+The site has to use [Kontent Smart Link SDK](https://github.com/Kentico/kontent-smart-link#readme). In this example, the Smar Link SDK is already configured in the [layout component](../src/components/Layout/index.jsx) with the query string parameter name set to `preview-mode` and marking the element by the appropriate [data attributes](https://github.com/Kentico/kontent-smart-link/blob/master/README.md#data-attributes). You could use turn on the "Preview mode" by just adding a query string parameter to your URL (i.e. locally on <http://localhost:8000/?preview-mode=true>).
+
 
 ### Turn on Web spotlight
 
