@@ -53,7 +53,8 @@ These objects are about to be created or enabled when the Web Spotlight is activ
         * Link same content items that are linked from `Menu items` element to `New Menu items`.
         * Publish the changes.
         * ![Fill new Subpages element](./new-menu-items-content.png)
-    * Open content types section.
+    * Open the Content Types section.
+
         * Remove `Linked items` element called `Menu items` from `Menu` content type (don't save changes).
         * Rename `New Menu items` element to `Menu items` (don't save changes).
         * Set `Menu items` element codename to `menu_items` (don't save changes).
