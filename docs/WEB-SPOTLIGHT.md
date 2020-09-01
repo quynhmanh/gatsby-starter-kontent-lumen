@@ -2,9 +2,11 @@
 
 [Web Spotlight](./http://webspotlight.kontent.ai/) is an additional tool for [Kentico Kontent](https://kontent.ai) focused on website management. Feel the power of a headless CMS while enabling your content creators to produce and update content in the context of your website.
 
-You could find more information about this feature in the [official documentation](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight), or checkout the [recoding of "Sneak Peek: An introduction to Web Spotlight" webinar](https://kontent.ai/webinars/on-demand/introduction-web-spotlight).
+You could find more information about this feature in the [official documentation](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight), or checkout the [recording of "Sneak Peek: An introduction to Web Spotlight" webinar](https://kontent.ai/webinars/on-demand/introduction-web-spotlight).
 
-This guide will show you what needs to be done to be able to integrate your preview environment into the Web Spotlight.)
+![Web Spotlight preview](./web-spotlight.png)
+
+_This guide will show you what needs to be done to be able to integrate your preview environment into the Web Spotlight._
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@ This guide will show you what needs to be done to be able to integrate your prev
 
 ### Get started
 
-It is required to do basically three steps. First, prepare the code for the Web Spotlight for preview environment, then turn on Web Spotlight on Kontent project, and lastly use newly enabled features to connect Kontent project to preview environment.
+It is required to do three steps. First, prepare the code for the Web Spotlight for preview environment, then turn on Web Spotlight on Kontent project, and lastly use newly enabled features to connect Kontent project to preview environment.
 
 ### Kontent Smart Link SDK
 
@@ -25,9 +27,11 @@ The site has to use [Kontent Smart Link SDK](https://github.com/Kentico/kontent-
 
 To purchase the Web Spotlight, you could [request a guided tour](https://webspotlight.kontent.ai/#form), or you could [Use the Intercom](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight#a-boost-your-web-with-web-spotlight). Once the Web Spotlight is activated you will see in the Kontent UI new [WebSpotlight tab](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight#a-what-web-spotlight-looks-like) and the [`Subpages` element type will be enabled](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight#a-how-web-spotlight-works).
 
+These object are about to be created or enabled when the Web Spotlight is activated:
+
 * Content type `Homepage` is created with `Subpages` elements.
-  * One empty content item called `Homepage` based on that content type that works as a website root.
-* Sample content type `Page` that should be used for menu definition, but we already have out content model `Menu item` ready and filled with data, so that content type is not necessary to be used.
+  * One empty content item called `Homepage` based on that content type that works as a website root in Web Spotlight.
+* Sample content type `Page` that should be used for menu definition. The example already contains a content model `Menu item` for this purposes ready and filled with data, so `Page` content type is not necessary to be used.
 
 ### Integrate preview with Web Spotlight
 
@@ -38,24 +42,30 @@ To purchase the Web Spotlight, you could [request a guided tour](https://webspot
         * Add new `Subpages` element to `Menu` content type and name it `New Menu items`.
         * Allow only add `Menu Item` content type.
         * Save the changes.
+        * ![Add new Subpages element](./new-menu-items.png)
     * Open Content listing
         * Select `Navigation Menu` content item of type `Menu`.
         * Create new version of this item.
         * Link same content items that are linked from `Menu items` element to `New Menu items`.
         * Publish the changes.
+        * ![Fill new Subpages element](./new-menu-items-content.png)
     * Open content types section.
         * Remove `Linked items` element called `Menu items` from `Menu` content type (don't save changes).
         * Rename `New Menu items` element to `Menu items` (don't save changes).
         * Set `Menu items` element codename to `menu_items` (don't save changes).
         * Save the changes.
-1. Link the `Navigation Menu` content item from the `HomePage` and publish the change.
-1. Last thing to remaining is to set up the [Preview URLs](https://docs.kontent.ai/tutorials/develop-apps/build-strong-foundation/set-up-preview#a-set-up-content-preview-in-your-project)
-    * You should follow [](../README.md#Preview-URLs) to set them up.
+        * ![Remove old Subpages element](./new-menu-items-finalize.png)
+1. Link the `Navigation Menu` content item from the `HomePage` content item via `Subpages` element and publish the change.
+    * ![Add Navigation to Homepage](./homepage-navigation-link.png)
+1. Last remaining step is to set up the [Preview URLs](https://docs.kontent.ai/tutorials/develop-apps/build-strong-foundation/set-up-preview#a-set-up-content-preview-in-your-project)
+    * You should follow [Preview URLs section](../README.md#Preview-URLs) to set them up.
 
-Now you have your Webs Spotlight ready and set!
+----
+
+**🚀 Now you have your Webs Spotlight ready and set! 🚀**
 
 ![Web Spotlight preview](./web-spotlight.png)
 
-> If you have chose Gatsby cloud for your Gatsby preview hosting, you are not required to use `Refresh preview` button - the site should refresh itself once the site is rebuilt.
+> If you have chosen Gatsby Cloud for your preview hosting, you are not even required to use `Refresh preview` button - the site should refresh itself once the site is rebuilt.
 
 ![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/gatsby-starter-kontent-lumen/docs/WEB-SPOTLIGHT?pixel)
