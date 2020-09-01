@@ -6,8 +6,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2adc83d6-9eba-45fc-b95c-c205e75d3189/deploy-status)](https://app.netlify.com/sites/gatsby-starter-kontent-lumen/deploys)
 
-**⚠ Build is currently failing, because some content structure changes to be able to [showcase the Web spotlight easily](https://github.com/Kentico/gatsby-starter-kontent-lumen/pull/14)**
-
 Lumen is a minimal, lightweight and mobile-first starter for creating blogs using
 [Gatsby](https://github.com/gatsbyjs/gatsby).
 
