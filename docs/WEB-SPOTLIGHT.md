@@ -29,7 +29,8 @@ The site has to use [Kontent Smart Link SDK](https://github.com/Kentico/kontent-
 
 To purchase the Web Spotlight, you could [request a guided tour](https://webspotlight.kontent.ai/#form), or you could [Use the Intercom](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight#a-boost-your-web-with-web-spotlight). Once the Web Spotlight is activated you will see in the Kontent UI new [WebSpotlight tab](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight#a-what-web-spotlight-looks-like) and the [`Subpages` element type will be enabled](https://docs.kontent.ai/tutorials/set-up-kontent/set-up-your-project/web-spotlight#a-how-web-spotlight-works).
 
-These object are about to be created or enabled when the Web Spotlight is activated:
+These objects are about to be created or enabled when the Web Spotlight is activated:
+
 
 * Content type `Homepage` is created with `Subpages` elements.
   * One empty content item called `Homepage` based on that content type that works as a website root in Web Spotlight.
