@@ -91,8 +91,8 @@ const sidebar = ({ isHomePage }) => {
 
   return (
     <div className="sidebar">
-      <div className="sidebar__inner">
-        <div className="sidebar__author" data-kontent-item-id={author.system.id}>
+      <div className="sidebar__inner" data-kontent-item-id={author.system.id}>
+        <div className="sidebar__author">
           <div>
             <Link to="/">
               <img
