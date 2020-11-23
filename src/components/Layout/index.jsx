@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
           data-kontent-project-id={data.sitePlugin.pluginOptions.projectId}
           data-kontent-language-codename={data.sitePlugin.pluginOptions.languageCodenames[0]}
         >
-          <Helmet defaultTitle="Blog by John Doe">
+          <Helmet defaultTitle="Blog by Quynh Nguyen">
             <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
           </Helmet>
           {children}
